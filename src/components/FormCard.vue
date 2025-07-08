@@ -71,7 +71,7 @@ function handleSubmit() {
 <template>
   <form
     @submit.prevent="handleSubmit"
-    class="w-full max-w-lg space-y-6 rounded-xl bg-white px-12 py-14 shadow"
+    class="w-full max-w-lg space-y-6 rounded-xl bg-white px-6 py-8 shadow md:px-12 md:py-14"
   >
     <!-- name + budget -->
     <div class="grid grid-cols-1 gap-4 md:grid-cols-2">

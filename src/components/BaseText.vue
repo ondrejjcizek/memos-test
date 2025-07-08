@@ -13,11 +13,11 @@ const alignClass = computed(() => {
 const sizeClass = computed(() => {
   switch (props.size) {
     case 'sm':
-      return 'text-sm leading-6 md:text-base md:leading-[26px] font-normal'
+      return 'text-sm font-normal leading-6 md:text-base md:leading-[26px]'
     case 'lg':
       return 'text-lg font-bold md:text-2xl'
     default:
-      return 'md:text-[22px] text-lg'
+      return 'text-lg md:text-[22px]'
   }
 })
 </script>

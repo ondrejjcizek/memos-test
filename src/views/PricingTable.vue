@@ -9,7 +9,7 @@ import PricingCard from '@/components/PricingCard.vue'
   <section id="pricing" class="bg-[#2F1893] py-12 md:py-16 lg:py-24">
     <BaseContainer>
       <BaseTitle class="mb-8" size="md">Plans & Pricing</BaseTitle>
-      <BaseText class="mx-auto mb-14 max-w-[586px]">
+      <BaseText class="mx-auto mb-14 max-w-[400px] md:max-w-[586px]">
         Startup Framework is free forever — you only pay for custom domain hosting or to export your
         site.
       </BaseText>
