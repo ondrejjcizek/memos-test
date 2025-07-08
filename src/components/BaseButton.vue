@@ -14,10 +14,10 @@ defineProps<{
     :type="type ?? 'button'"
     :aria-label="ariaLabel"
     :class="[
-      'font-medium text-base cursor-pointer transition-colors duration-200 hover:filter hover:brightness-110 focus:brightness-110 focus:ring-1 focus:ring-blue-500 focus:ring-offset-0',
+      'cursor-pointer text-base font-medium transition-colors duration-200 hover:brightness-110 hover:filter focus:ring-1 focus:ring-blue-500 focus:ring-offset-0 focus:brightness-110',
       iconOnly
-        ? 'min-w-14 grid place-items-center aspect-square rounded-full'
-        : 'px-9 py-4 rounded-full',
+        ? 'grid aspect-square min-w-14 place-items-center rounded-full'
+        : 'rounded-full px-9 py-4',
       center ? 'mx-auto' : '',
       fullWidth ? 'w-full' : 'max-w-fit',
     ]"

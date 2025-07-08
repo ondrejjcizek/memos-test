@@ -37,22 +37,22 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="relative px-10 max-w-7xl mx-auto w-full">
+  <div class="relative mx-auto w-full max-w-7xl px-10">
     <div class="overflow-hidden" ref="emblaRef">
-      <div class="flex flex-col h-[700px] md:h-[582px]">
+      <div class="flex h-[700px] flex-col md:h-[582px]">
         <slot />
       </div>
     </div>
 
     <div
-      class="absolute -right-6 top-1/2 -translate-y-1/2 rotate-90 flex justify-center md:mt-12 mt-8 gap-2"
+      class="absolute top-1/2 -right-6 mt-8 flex -translate-y-1/2 rotate-90 justify-center gap-2 md:mt-12"
     >
       <button
         v-for="(_, index) in scrollSnaps"
         :key="index"
         @click="scrollTo(index)"
         :class="[
-          'w-3 h-3 rounded-full cursor-pointer',
+          'h-3 w-3 cursor-pointer rounded-full',
           selectedIndex === index ? 'bg-white' : 'border-[2px] border-white opacity-30',
         ]"
         aria-label="Go to slide"

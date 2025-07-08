@@ -34,56 +34,56 @@ onUnmounted(() => {
     class="fixed top-20 z-20 w-full transition-transform duration-300"
     :class="[isSticky ? 'translate-x-0 -translate-y-15' : '']"
   >
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div
         class="flex items-center justify-center py-4"
         :class="[
           isSticky
-            ? 'bg-black/80 md:bg-transparent px-4 py-1 rounded-full'
-            : 'px-4 py-1 rounded-full',
+            ? 'rounded-full bg-black/80 px-4 py-1 md:bg-transparent'
+            : 'rounded-full px-4 py-1',
         ]"
       >
         <!-- Desktop Nav -->
         <ul
-          class="hidden md:flex gap-8"
+          class="hidden gap-8 md:flex"
           :class="[
             'transition-colors duration-300',
             isSticky
-              ? 'bg-black/80 backdrop-blur-sm px-4 py-2 rounded-full'
-              : 'px-4 py-2 rounded-full',
+              ? 'rounded-full bg-black/80 px-4 py-2 backdrop-blur-sm'
+              : 'rounded-full px-4 py-2',
           ]"
         >
           <li>
-            <a class="text-white font-medium hover:text-blue-400 transition-colors" href="#home">
+            <a class="font-medium text-white transition-colors hover:text-blue-400" href="#home">
               Home
             </a>
           </li>
           <li>
             <a
-              class="text-white font-medium hover:text-blue-400 transition-colors"
+              class="font-medium text-white transition-colors hover:text-blue-400"
               href="#features"
             >
               Features
             </a>
           </li>
           <li>
-            <a class="text-white font-medium hover:text-blue-400 transition-colors" href="#pricing">
+            <a class="font-medium text-white transition-colors hover:text-blue-400" href="#pricing">
               Pricing
             </a>
           </li>
           <li>
-            <a class="text-white font-medium hover:text-blue-400 transition-colors" href="#blog">
+            <a class="font-medium text-white transition-colors hover:text-blue-400" href="#blog">
               Blog
             </a>
           </li>
           <li class="flex items-center">
             <a href="https://dribbble.com/" aria-label="Dribbble" target="_blank">
-              <IconDribble class="w-5 h-5 text-white hover:text-blue-400" />
+              <IconDribble class="h-5 w-5 text-white hover:text-blue-400" />
             </a>
           </li>
           <li class="flex items-center">
             <a href="https://www.behance.net/" aria-label="Behance" target="_blank">
-              <IconBehance class="w-5 h-5 text-white hover:text-blue-400" />
+              <IconBehance class="h-5 w-5 text-white hover:text-blue-400" />
             </a>
           </li>
         </ul>
@@ -91,7 +91,7 @@ onUnmounted(() => {
         <!-- hamburger -->
         <button
           @click="toggleMobileMenu"
-          class="md:hidden text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+          class="text-white focus:ring-2 focus:ring-blue-500 focus:outline-none md:hidden"
           aria-label="Hamburger Menu"
         >
           <svg
@@ -131,13 +131,13 @@ onUnmounted(() => {
       <transition name="fade">
         <ul
           v-if="mobileMenuOpen"
-          class="flex flex-col gap-4 mt-2 bg-black/90 backdrop-blur-sm px-4 py-4 rounded-lg md:hidden"
+          class="mt-2 flex flex-col gap-4 rounded-lg bg-black/90 px-4 py-4 backdrop-blur-sm md:hidden"
         >
           <li>
             <a
               href="#home"
               @click="handleMobileNavClick"
-              class="text-white font-medium hover:text-blue-400 transition-colors"
+              class="font-medium text-white transition-colors hover:text-blue-400"
             >
               Home
             </a>
@@ -146,7 +146,7 @@ onUnmounted(() => {
             <a
               href="#features"
               @click="handleMobileNavClick"
-              class="text-white font-medium hover:text-blue-400 transition-colors"
+              class="font-medium text-white transition-colors hover:text-blue-400"
             >
               Features
             </a>
@@ -155,7 +155,7 @@ onUnmounted(() => {
             <a
               href="#pricing"
               @click="handleMobileNavClick"
-              class="text-white font-medium hover:text-blue-400 transition-colors"
+              class="font-medium text-white transition-colors hover:text-blue-400"
             >
               Pricing
             </a>
@@ -164,7 +164,7 @@ onUnmounted(() => {
             <a
               href="#blog"
               @click="handleMobileNavClick"
-              class="text-white font-medium hover:text-blue-400 transition-colors"
+              class="font-medium text-white transition-colors hover:text-blue-400"
             >
               Blog
             </a>
@@ -176,7 +176,7 @@ onUnmounted(() => {
               aria-label="Dribbble"
               @click="handleMobileNavClick"
             >
-              <IconDribble class="w-5 h-5 text-white hover:text-blue-400" />
+              <IconDribble class="h-5 w-5 text-white hover:text-blue-400" />
             </a>
           </li>
           <li class="flex items-center">
@@ -186,7 +186,7 @@ onUnmounted(() => {
               aria-label="Behance"
               @click="handleMobileNavClick"
             >
-              <IconBehance class="w-5 h-5 text-white hover:text-blue-400" />
+              <IconBehance class="h-5 w-5 text-white hover:text-blue-400" />
             </a>
           </li>
         </ul>

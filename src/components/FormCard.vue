@@ -71,10 +71,10 @@ function handleSubmit() {
 <template>
   <form
     @submit.prevent="handleSubmit"
-    class="bg-white rounded-xl px-12 py-14 w-full max-w-lg space-y-6 shadow"
+    class="w-full max-w-lg space-y-6 rounded-xl bg-white px-12 py-14 shadow"
   >
     <!-- name + budget -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
       <div>
         <FormLabel text="Your name" for="name" />
         <input
@@ -82,16 +82,16 @@ function handleSubmit() {
           v-model="name"
           type="text"
           placeholder="First name"
-          class="w-full rounded-full text-lg text-gray-600 border-2 border-[#EBEAED] px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          class="w-full rounded-full border-2 border-[#EBEAED] px-4 py-2 text-lg text-gray-600 focus:ring-2 focus:ring-indigo-500 focus:outline-none"
         />
-        <p v-if="errors.name" class="text-red-500 text-xs mt-1">{{ errors.name }}</p>
+        <p v-if="errors.name" class="mt-1 text-xs text-red-500">{{ errors.name }}</p>
       </div>
       <div class="relative">
         <FormLabel text="Budget" for="budget" />
         <select
           id="budget"
           v-model="budget"
-          class="w-full text-[#1E0E62] text-lg font-medium rounded-full border-2 border-[#EBEAED] px-4 py-2 appearance-none focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          class="w-full appearance-none rounded-full border-2 border-[#EBEAED] px-4 py-2 text-lg font-medium text-[#1E0E62] focus:ring-2 focus:ring-indigo-500 focus:outline-none"
         >
           <option v-for="b in budgets" :key="b" :value="b">{{ b }}</option>
         </select>
@@ -107,9 +107,9 @@ function handleSubmit() {
         v-model="email"
         type="email"
         placeholder="name@mail.com"
-        class="w-full rounded-full text-lg text-gray-600 border-2 border-[#EBEAED] px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        class="w-full rounded-full border-2 border-[#EBEAED] px-4 py-2 text-lg text-gray-600 focus:ring-2 focus:ring-indigo-500 focus:outline-none"
       />
-      <p v-if="errors.email" class="text-red-500 text-xs mt-1">{{ errors.email }}</p>
+      <p v-if="errors.email" class="mt-1 text-xs text-red-500">{{ errors.email }}</p>
     </div>
 
     <!-- message -->
@@ -120,22 +120,22 @@ function handleSubmit() {
         v-model="message"
         placeholder="Message"
         rows="4"
-        class="w-full rounded-xl text-lg text-gray-600 border-2 border-[#EBEAED] px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        class="w-full rounded-xl border-2 border-[#EBEAED] px-4 py-2 text-lg text-gray-600 focus:ring-2 focus:ring-indigo-500 focus:outline-none"
       ></textarea>
-      <p v-if="errors.message" class="text-red-500 text-xs mt-1">{{ errors.message }}</p>
+      <p v-if="errors.message" class="mt-1 text-xs text-red-500">{{ errors.message }}</p>
     </div>
 
     <!-- checkbox -->
-    <div class="flex flex-col sm:flex-row gap-6 sm:gap-4 items-center justify-between">
+    <div class="flex flex-col items-center justify-between gap-6 sm:flex-row sm:gap-4">
       <label class="flex items-center space-x-2 text-lg">
         <input
           v-model="sendCopy"
           type="checkbox"
           class="h-5 w-5 rounded border-teal-300 accent-[#25DAC5] focus:ring-0"
         />
-        <span class="text-gray-400 font-light">Send me a copy</span>
+        <span class="font-light text-gray-400">Send me a copy</span>
       </label>
-      <BaseButton class="text-lg min-w-[120px]" bgColor="#25DAC5" type="submit">Send</BaseButton>
+      <BaseButton class="min-w-[120px] text-lg" bgColor="#25DAC5" type="submit">Send</BaseButton>
     </div>
   </form>
 </template>

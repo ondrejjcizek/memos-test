@@ -8,14 +8,14 @@ import IconPlay from '@/components/icons/IconPlay.vue'
 </script>
 
 <template>
-  <section class="relative flex items-center min-h-[605px]">
+  <section class="relative flex min-h-[605px] items-center">
     <BackgroundImageOverlay filename="callToAction" :overlayOpacity="0.7" />
     <BaseContainer class="flex flex-col items-center">
       <BaseTitle size="lg" class="mb-6">
         Easy to setup.<br />
         Easy to maintain
       </BaseTitle>
-      <BaseText class="max-w-[518px] mx-auto mb-14">
+      <BaseText class="mx-auto mb-14 max-w-[518px]">
         Bootstrap is a widely-used, sleek, intuitive and powerful front-end framework for faster and
         easier web development.
       </BaseText>

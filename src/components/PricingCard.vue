@@ -13,16 +13,16 @@ defineProps<{
 
 <template>
   <article
-    class="flex flex-col rounded-xl border-2 border-white/20 pt-12 pb-10 px-8 md:pt-16 md:pb-14 md:px-11 text-white w-full max-w-sm min-w-xs"
+    class="flex w-full max-w-sm min-w-xs flex-col rounded-xl border-2 border-white/20 px-8 pt-12 pb-10 text-white md:px-11 md:pt-16 md:pb-14"
   >
-    <header class="mb-6 text-left ml-5">
-      <h2 class="text-[22px] font-medium tracking-wide mb-6">{{ planName }}</h2>
-      <p class="text-4xl font-bold tracking-wide mb-6">
-        {{ price }}<span class="align-top text-base font-normal ml-1">$</span>
+    <header class="mb-6 ml-5 text-left">
+      <h2 class="mb-6 text-[22px] font-medium tracking-wide">{{ planName }}</h2>
+      <p class="mb-6 text-4xl font-bold tracking-wide">
+        {{ price }}<span class="ml-1 align-top text-base font-normal">$</span>
       </p>
     </header>
 
-    <ul class="flex-1 space-y-4 mb-6">
+    <ul class="mb-6 flex-1 space-y-4">
       <li
         v-for="(feature, index) in features"
         :key="index"
@@ -30,10 +30,10 @@ defineProps<{
         :class="{ 'text-white/50': !feature.available }"
       >
         <template v-if="feature.available">
-          <IconCheck class="w-4 h-4 mr-2 text-green-400" aria-hidden="true" />
+          <IconCheck class="mr-2 h-4 w-4 text-green-400" aria-hidden="true" />
         </template>
         <template v-else>
-          <span class="w-5 h-5 mr-2"></span>
+          <span class="mr-2 h-5 w-5"></span>
         </template>
         {{ feature.label }}
       </li>

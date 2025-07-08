@@ -17,7 +17,7 @@ defineProps<{
       decoding="async"
       width="1920"
       height="1080"
-      class="w-full h-full object-cover inset-0 absolute z-1 select-none"
+      class="absolute inset-0 z-1 h-full w-full object-cover select-none"
       :style="{ opacity: overlayOpacity }"
     />
     <div class="absolute inset-0 bg-[#2F1893]" />

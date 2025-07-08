@@ -19,7 +19,7 @@ import IconGoogle from '@/components/icons/IconGoogle.vue'
           <a href="#googleplus" aria-label="Google Plus"><IconGoogle /></a>
         </div>
       </div>
-      <hr class="border border-white/30 my-6 md:my-10" />
+      <hr class="my-6 border border-white/30 md:my-10" />
       <div class="flex flex-wrap justify-between gap-4">
         <div class="flex flex-wrap items-center gap-5 text-white">
           <a class="hover:underline" href="#tour">Tour</a>

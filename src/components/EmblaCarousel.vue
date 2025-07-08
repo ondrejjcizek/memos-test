@@ -46,7 +46,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="relative px-10 max-w-7xl mx-auto w-full">
+  <div class="relative mx-auto w-full max-w-7xl px-10">
     <div class="overflow-hidden" ref="emblaRef">
       <div class="flex w-full">
         <slot />
@@ -55,7 +55,7 @@ onMounted(() => {
     <button
       @click="scrollPrev"
       :disabled="!canScrollPrev"
-      class="absolute left-0 top-1/2 -translate-y-1/2 cursor-pointer disabled:opacity-50 disabled:pointer-events-none"
+      class="absolute top-1/2 left-0 -translate-y-1/2 cursor-pointer disabled:pointer-events-none disabled:opacity-50"
       aria-label="Previous slide"
     >
       <IconChevronLeft />
@@ -63,18 +63,18 @@ onMounted(() => {
     <button
       @click="scrollNext"
       :disabled="!canScrollNext"
-      class="absolute right-0 top-1/2 -translate-y-1/2 cursor-pointer disabled:opacity-50 disabled:pointer-events-none"
+      class="absolute top-1/2 right-0 -translate-y-1/2 cursor-pointer disabled:pointer-events-none disabled:opacity-50"
       aria-label="Next slide"
     >
       <IconChevronRight />
     </button>
-    <div class="flex justify-center md:mt-12 mt-8 gap-2">
+    <div class="mt-8 flex justify-center gap-2 md:mt-12">
       <button
         v-for="(_, index) in scrollSnaps"
         :key="index"
         @click="scrollTo(index)"
         :class="[
-          'w-3 h-3 rounded-full cursor-pointer',
+          'h-3 w-3 cursor-pointer rounded-full',
           selectedIndex === index ? 'bg-white' : 'border-[2px] border-white opacity-30',
         ]"
         aria-label="Go to slide"

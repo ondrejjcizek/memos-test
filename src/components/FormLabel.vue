@@ -8,7 +8,7 @@ const props = defineProps<{
 <template>
   <label
     :for="props.for"
-    class="block text-sm uppercase tracking-[2px] font-semibold text-[#1E0E62] mb-3"
+    class="mb-3 block text-sm font-semibold tracking-[2px] text-[#1E0E62] uppercase"
   >
     {{ props.text }}
   </label>

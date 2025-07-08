@@ -4,7 +4,7 @@ import BaseTitle from './BaseTitle.vue'
 </script>
 
 <template>
-  <article class="flex flex-col items-start text-white text-left max-w-[271px]">
+  <article class="flex max-w-[271px] flex-col items-start text-left text-white">
     <div class="mb-6">
       <slot name="icon" />
     </div>

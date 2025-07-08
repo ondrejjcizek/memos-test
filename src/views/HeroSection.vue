@@ -8,34 +8,34 @@ import BackgroundImageOverlay from '@/components/BackgroundImageOverlay.vue'
 </script>
 
 <template>
-  <section id="home" class="relative flex items-center min-h-[850px]">
+  <section id="home" class="relative flex min-h-[850px] items-center">
     <BackgroundImageOverlay eager filename="hero" :overlayOpacity="0.5" />
     <BaseContainer>
       <!-- <MainNavigation /> -->
-      <div class="relative w-full flex flex-col my-48">
+      <div class="relative my-48 flex w-full flex-col">
         <EmblaCarousel class="mb-14 w-full">
-          <div class="flex-none basis-full min-w-0 select-none">
+          <div class="min-w-0 flex-none basis-full select-none">
             <BaseText size="lg" class="mb-7">Memos Test</BaseText>
-            <BaseTitle size="xl" class="mb-7 max-w-3xl mx-auto">Forget About Code</BaseTitle>
-            <BaseText class="max-w-3xl mx-auto"
+            <BaseTitle size="xl" class="mx-auto mb-7 max-w-3xl">Forget About Code</BaseTitle>
+            <BaseText class="mx-auto max-w-3xl"
               >Startup Framework gives you complete freedom over your creative process — you don’t
               have to think about any technical aspects. There are no limits and absolutely no
               coding.
             </BaseText>
           </div>
-          <div class="flex-none basis-full min-w-0 select-none">
+          <div class="min-w-0 flex-none basis-full select-none">
             <BaseText size="lg" class="mb-7">Startup 3</BaseText>
-            <BaseTitle size="xl" class="mb-7 max-w-3xl mx-auto">Forget About Code</BaseTitle>
-            <BaseText class="max-w-3xl mx-auto"
+            <BaseTitle size="xl" class="mx-auto mb-7 max-w-3xl">Forget About Code</BaseTitle>
+            <BaseText class="mx-auto max-w-3xl"
               >Startup Framework gives you complete freedom over your creative process — you don’t
               have to think about any technical aspects. There are no limits and absolutely no
               coding.
             </BaseText>
           </div>
-          <div class="flex-none basis-full min-w-0 select-none">
+          <div class="min-w-0 flex-none basis-full select-none">
             <BaseText size="lg" class="mb-7">Startup 3</BaseText>
-            <BaseTitle size="xl" class="mb-7 max-w-3xl mx-auto">Forget About Code</BaseTitle>
-            <BaseText class="max-w-3xl mx-auto"
+            <BaseTitle size="xl" class="mx-auto mb-7 max-w-3xl">Forget About Code</BaseTitle>
+            <BaseText class="mx-auto max-w-3xl"
               >Startup Framework gives you complete freedom over your creative process — you don’t
               have to think about any technical aspects. There are no limits and absolutely no
               coding.
