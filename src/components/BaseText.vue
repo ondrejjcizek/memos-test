@@ -13,7 +13,7 @@ const alignClass = computed(() => {
 const sizeClass = computed(() => {
   switch (props.size) {
     case 'sm':
-      return 'text-sm md:text-base'
+      return 'text-sm leading-6 md:text-base md:leading-[26px] font-normal'
     case 'lg':
       return 'text-lg font-bold md:text-2xl'
     default:
@@ -23,7 +23,7 @@ const sizeClass = computed(() => {
 </script>
 
 <template>
-  <p :class="['text-white text-', alignClass, sizeClass]">
+  <p :class="['text-white', alignClass, sizeClass]">
     <slot />
   </p>
 </template>

@@ -46,7 +46,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="relative px-12 max-w-7xl mx-auto">
+  <div class="relative max-w-7xl mx-auto w-full">
     <div class="overflow-hidden" ref="emblaRef">
       <div class="flex w-full">
         <slot />
