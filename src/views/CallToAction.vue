@@ -8,7 +8,7 @@ import IconPlay from '@/components/icons/IconPlay.vue'
 </script>
 
 <template>
-  <div class="relative flex items-center min-h-[605px]">
+  <section class="relative flex items-center min-h-[605px]">
     <BackgroundImageOverlay filename="callToAction" :overlayOpacity="0.7" />
     <BaseContainer class="flex flex-col items-center">
       <BaseTitle size="lg" class="mb-6">
@@ -24,5 +24,5 @@ import IconPlay from '@/components/icons/IconPlay.vue'
         <BaseButton bgColor="#25DAC5">Get Started</BaseButton>
       </div>
     </BaseContainer>
-  </div>
+  </section>
 </template>

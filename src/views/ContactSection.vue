@@ -10,7 +10,7 @@ import FormCard from '@/components/FormCard.vue'
 </script>
 
 <template>
-  <div class="relative flex items-center min-h-[770px]">
+  <section class="relative flex items-center min-h-[770px]">
     <BackgroundImageOverlay filename="contact" :overlayOpacity="0.6" />
     <BaseContainer
       class="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20 my-20 md:my-10"
@@ -38,5 +38,5 @@ import FormCard from '@/components/FormCard.vue'
       </div>
       <FormCard />
     </BaseContainer>
-  </div>
+  </section>
 </template>

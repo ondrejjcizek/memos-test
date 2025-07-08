@@ -9,7 +9,7 @@ import BackgroundImageOverlay from '@/components/BackgroundImageOverlay.vue'
 </script>
 
 <template>
-  <div class="relative flex items-center min-h-[850px]">
+  <section class="relative flex items-center min-h-[850px]">
     <BackgroundImageOverlay filename="hero" :overlayOpacity="0.5" />
     <BaseContainer>
       <MainNavigation />
@@ -46,5 +46,5 @@ import BackgroundImageOverlay from '@/components/BackgroundImageOverlay.vue'
         <BaseButton center>Create an Account</BaseButton>
       </div>
     </BaseContainer>
-  </div>
+  </section>
 </template>

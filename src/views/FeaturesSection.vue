@@ -10,7 +10,7 @@ import EmblaCarouselVertical from '@/components/EmblaCarouselVertical.vue'
 </script>
 
 <template>
-  <div class="relative flex items-center min-h-[850px]">
+  <section class="relative flex items-center min-h-[850px]">
     <BackgroundImageOverlay filename="features" :overlayOpacity="0.6" />
     <BaseContainer>
       <div class="grid lg:grid-cols-2 md:grid-cols-[1.5fr_3fr] items-center gap-7">
@@ -181,5 +181,5 @@ import EmblaCarouselVertical from '@/components/EmblaCarouselVertical.vue'
         </EmblaCarouselVertical>
       </div>
     </BaseContainer>
-  </div>
+  </section>
 </template>
