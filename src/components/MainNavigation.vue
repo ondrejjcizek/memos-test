@@ -92,6 +92,7 @@ onUnmounted(() => {
         <button
           @click="toggleMobileMenu"
           class="md:hidden text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+          aria-label="Hamburger Menu"
         >
           <svg
             v-if="!mobileMenuOpen"
