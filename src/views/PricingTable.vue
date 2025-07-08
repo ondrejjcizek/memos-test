@@ -6,7 +6,7 @@ import PricingCard from '@/components/PricingCard.vue'
 </script>
 
 <template>
-  <section class="bg-[#2F1893] py-24">
+  <section id="pricing" class="bg-[#2F1893] py-12 md:py-16 lg:py-24">
     <BaseContainer>
       <BaseTitle class="mb-8" size="md">Plans & Pricing</BaseTitle>
       <BaseText class="max-w-[586px] mx-auto mb-14">

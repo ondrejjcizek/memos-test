@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import MainNavigation from '@/components/MainNavigation.vue'
 import BaseTitle from '@/components/BaseTitle.vue'
 import BaseText from '@/components/BaseText.vue'
 import EmblaCarousel from '@/components/EmblaCarousel.vue'
@@ -9,14 +8,14 @@ import BackgroundImageOverlay from '@/components/BackgroundImageOverlay.vue'
 </script>
 
 <template>
-  <section class="relative flex items-center min-h-[850px]">
-    <BackgroundImageOverlay filename="hero" :overlayOpacity="0.5" />
+  <section id="home" class="relative flex items-center min-h-[850px]">
+    <BackgroundImageOverlay eager filename="hero" :overlayOpacity="0.5" />
     <BaseContainer>
-      <MainNavigation />
+      <!-- <MainNavigation /> -->
       <div class="relative w-full flex flex-col my-48">
         <EmblaCarousel class="mb-14 w-full">
           <div class="flex-none basis-full min-w-0 select-none">
-            <BaseText size="lg" class="mb-7">Startup 3</BaseText>
+            <BaseText size="lg" class="mb-7">Memos Test</BaseText>
             <BaseTitle size="xl" class="mb-7 max-w-3xl mx-auto">Forget About Code</BaseTitle>
             <BaseText class="max-w-3xl mx-auto"
               >Startup Framework gives you complete freedom over your creative process — you don’t

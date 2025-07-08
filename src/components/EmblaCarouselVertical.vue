@@ -39,7 +39,7 @@ onMounted(() => {
 <template>
   <div class="relative px-10 max-w-7xl mx-auto w-full">
     <div class="overflow-hidden" ref="emblaRef">
-      <div class="flex flex-col h-[582px]">
+      <div class="flex flex-col h-[700px] md:h-[582px]">
         <slot />
       </div>
     </div>

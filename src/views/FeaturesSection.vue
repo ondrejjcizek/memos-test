@@ -10,13 +10,14 @@ import EmblaCarouselVertical from '@/components/EmblaCarouselVertical.vue'
 </script>
 
 <template>
-  <section class="relative flex items-center min-h-[850px]">
+  <section id="features" class="relative flex items-center min-h-[850px]">
     <BackgroundImageOverlay filename="features" :overlayOpacity="0.6" />
     <BaseContainer>
       <div class="grid lg:grid-cols-2 md:grid-cols-[1.5fr_3fr] items-center gap-7">
         <div class="relative">
           <img
             src="/images/features-mockup.png"
+            loading="lazy"
             srcset="/images/features-mockup@2x.png"
             alt="Features Mockup"
             class="md:absolute right-0 top-1/2 md:-translate-y-1/2 max-w-2xl -ml-1/2 md:min-w-[983px] w-full my-10 md:my-0"

@@ -20,7 +20,7 @@ import IconPlay from '@/components/icons/IconPlay.vue'
         easier web development.
       </BaseText>
       <div class="flex gap-[30px]">
-        <BaseButton iconOnly bgColor="#EA3223"><IconPlay /></BaseButton>
+        <BaseButton iconOnly bgColor="#EA3223" ariaLabel="Play video"><IconPlay /></BaseButton>
         <BaseButton bgColor="#25DAC5">Get Started</BaseButton>
       </div>
     </BaseContainer>

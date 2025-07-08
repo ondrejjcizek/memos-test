@@ -5,12 +5,14 @@ defineProps<{
   iconOnly?: boolean
   center?: boolean
   fullWidth?: boolean
+  ariaLabel?: string
 }>()
 </script>
 
 <template>
   <button
     :type="type ?? 'button'"
+    :aria-label="ariaLabel"
     :class="[
       'font-medium text-base cursor-pointer transition-colors duration-200 hover:filter hover:brightness-110 focus:brightness-110 focus:ring-1 focus:ring-blue-500 focus:ring-offset-0',
       iconOnly

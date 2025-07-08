@@ -2,6 +2,7 @@
 defineProps<{
   filename: string
   overlayOpacity: number
+  eager?: boolean
 }>()
 </script>
 
@@ -10,8 +11,12 @@ defineProps<{
     <img
       :src="`/images/${filename}.jpg`"
       :srcset="`/images/${filename}@2x.jpg`"
-      alt="Background"
+      alt=""
       draggable="false"
+      :loading="eager ? 'eager' : 'lazy'"
+      decoding="async"
+      width="1920"
+      height="1080"
       class="w-full h-full object-cover inset-0 absolute z-1 select-none"
       :style="{ opacity: overlayOpacity }"
     />
