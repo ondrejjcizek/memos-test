@@ -43,7 +43,7 @@ onUnmounted(() => {
             : 'rounded-full px-4 py-1',
         ]"
       >
-        <!-- Desktop Nav -->
+        <!-- desktop menu -->
         <ul
           class="hidden gap-8 md:flex"
           :class="[
@@ -131,7 +131,7 @@ onUnmounted(() => {
       <transition name="fade">
         <ul
           v-if="mobileMenuOpen"
-          class="mt-2 flex flex-col gap-4 rounded-lg bg-black/90 px-4 py-4 backdrop-blur-sm md:hidden"
+          class="mt-2 flex flex-col items-center gap-4 rounded-lg bg-black/90 px-4 py-4 backdrop-blur-sm md:hidden"
         >
           <li>
             <a

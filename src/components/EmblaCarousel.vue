@@ -75,7 +75,7 @@ onMounted(() => {
         @click="scrollTo(index)"
         :class="[
           'h-3 w-3 cursor-pointer rounded-full',
-          selectedIndex === index ? 'bg-white' : 'border-[2px] border-white opacity-30',
+          selectedIndex === index ? 'bg-white' : 'border-[2px] border-white/100 opacity-30',
         ]"
         aria-label="Go to slide"
       />

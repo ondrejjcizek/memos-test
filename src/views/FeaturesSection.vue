@@ -158,7 +158,7 @@ import EmblaCarouselVertical from '@/components/EmblaCarouselVertical.vue'
                 create websites for their startups quickly and easily.</BaseText
               >
             </div>
-            <div class="flex gap-6">
+            <div class="mb-6 flex gap-6">
               <FeatureCard>
                 <template #icon>
                   <IconCopy />

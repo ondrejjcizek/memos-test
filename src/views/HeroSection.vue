@@ -8,11 +8,10 @@ import BackgroundImageOverlay from '@/components/BackgroundImageOverlay.vue'
 </script>
 
 <template>
-  <section id="home" class="relative flex min-h-[850px] items-center">
+  <section id="home" class="relative flex min-h-dvh items-center lg:min-h-[850px]">
     <BackgroundImageOverlay eager filename="hero" :overlayOpacity="0.5" />
     <BaseContainer>
-      <!-- <MainNavigation /> -->
-      <div class="relative my-48 flex w-full flex-col">
+      <div class="relative my-36 flex w-full flex-col md:my-48">
         <EmblaCarousel class="mb-14 w-full">
           <div class="min-w-0 flex-none basis-full select-none">
             <BaseText size="lg" class="mb-7">Memos Test</BaseText>
