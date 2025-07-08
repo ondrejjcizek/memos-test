@@ -43,7 +43,7 @@ import BackgroundImageOverlay from '@/components/BackgroundImageOverlay.vue'
             </BaseText>
           </div>
         </EmblaCarousel>
-        <BaseButton>Create an Account</BaseButton>
+        <BaseButton center>Create an Account</BaseButton>
       </div>
     </BaseContainer>
   </div>

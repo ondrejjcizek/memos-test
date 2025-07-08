@@ -35,7 +35,7 @@ const sizeClass = computed(() => {
     case 'xl':
       return 'lg:text-7xl md:text-6xl text-5xl leading-[1.2] tracking-[-1px]'
     case 'lg':
-      return 'text-4xl md:text-[58px] leading-[70px] tracking-[-1px]'
+      return 'text-4xl md:text-[58px] leading-[1.2] tracking-[-1px]'
     case 'md':
       return 'text-3xl md:text-[42px] tracking-[-0.4px]'
     case 'sm':

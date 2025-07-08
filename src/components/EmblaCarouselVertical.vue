@@ -1,11 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import emblaCarouselVue from 'embla-carousel-vue'
-import IconChevronLeft from './icons/IconChevronLeft.vue'
-import IconChevronRight from './icons/IconChevronRight.vue'
-
-// Call emblaCarouselVue() INSIDE setup so each component instance gets a unique ref & API
-const [emblaRef, emblaApi] = emblaCarouselVue()
+const [emblaRef, emblaApi] = emblaCarouselVue({ axis: 'y' })
 
 const selectedIndex = ref(0)
 const scrollSnaps = ref<number[]>([])
@@ -14,18 +10,13 @@ const canScrollPrev = ref(false)
 const canScrollNext = ref(false)
 
 function scrollTo(index: number) {
-  emblaApi.value?.scrollTo(index)
-}
-function scrollPrev() {
-  emblaApi.value?.scrollPrev()
-}
-function scrollNext() {
-  emblaApi.value?.scrollNext()
+  if (emblaApi.value) emblaApi.value.scrollTo(index)
 }
 function updateSelected() {
   if (!emblaApi.value) return
   selectedIndex.value = emblaApi.value.selectedScrollSnap()
 }
+
 function updateButtons() {
   if (!emblaApi.value) return
   canScrollPrev.value = emblaApi.value.canScrollPrev()
@@ -48,27 +39,14 @@ onMounted(() => {
 <template>
   <div class="relative px-10 max-w-7xl mx-auto w-full">
     <div class="overflow-hidden" ref="emblaRef">
-      <div class="flex w-full">
+      <div class="flex flex-col h-[582px]">
         <slot />
       </div>
     </div>
-    <button
-      @click="scrollPrev"
-      :disabled="!canScrollPrev"
-      class="absolute left-0 top-1/2 -translate-y-1/2 cursor-pointer disabled:opacity-50 disabled:pointer-events-none"
-      aria-label="Previous slide"
+
+    <div
+      class="absolute -right-6 top-1/2 -translate-y-1/2 rotate-90 flex justify-center md:mt-12 mt-8 gap-2"
     >
-      <IconChevronLeft />
-    </button>
-    <button
-      @click="scrollNext"
-      :disabled="!canScrollNext"
-      class="absolute right-0 top-1/2 -translate-y-1/2 cursor-pointer disabled:opacity-50 disabled:pointer-events-none"
-      aria-label="Next slide"
-    >
-      <IconChevronRight />
-    </button>
-    <div class="flex justify-center md:mt-12 mt-8 gap-2">
       <button
         v-for="(_, index) in scrollSnaps"
         :key="index"
